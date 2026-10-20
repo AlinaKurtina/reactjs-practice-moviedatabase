@@ -4,8 +4,6 @@ import CastData from "./components/CastData/CastData";
 import AsideData from "./components/AsideData/AsideData";
 import MovieData from "./components/MovieData/MovieData";
 
-import '../../styles/global.css';
-
 function MovieDetailsPage() {
     return (
         <>

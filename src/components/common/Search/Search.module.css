@@ -1,21 +1,40 @@
 .input {
-    padding: 7px;
-    border-radius: 5px;
-    font-family: var(--body-font);
-    font-size: small;
-    max-width: 150px;
+  padding: 7px;
+  border-radius: 5px;
+  font-family: var(--body-font);
+  font-size: small;
+  max-width: 200px;
 }
 
 .button {
-    margin-left: 5px;
-    background-color: var(--button);
-    padding: 7px;
-    border-radius: 5px;
-    font-size: small;
-    color: var(--font-color-light);
-    cursor: pointer;
+  margin-left: 5px;
+  background-color: var(--button);
+  padding: 7px;
+  border-radius: 5px;
+  font-size: small;
+  color: var(--font-color-light);
+  cursor: pointer;
 }
 
 .button:hover {
-    background-color: var(--button-hovered);
+  background-color: var(--button-hovered);
+}
+
+.searchButton {
+  background-color: transparent;
+  display: none;
+}
+
+@media screen and (max-width: 676px) {
+  .input {
+    display: none;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .searchButton {
+    display: inline-block;
+  }
 }

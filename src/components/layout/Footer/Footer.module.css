@@ -12,6 +12,7 @@
 
 .contactsHeading {
     font-family: var(--heading-font);
+    letter-spacing: 0.1em;
 }
 
 .contacts {
@@ -19,6 +20,7 @@
     flex-direction: column;
     gap: 10px;
     color: var(--body-font);
+    margin-left: auto;
 }
 
 .contactsLink {

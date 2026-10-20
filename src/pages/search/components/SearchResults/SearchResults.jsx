@@ -3,20 +3,22 @@ import styles from './SearchResults.module.css';
 
 function SearchResults() {
     return (
-        <ul className={styles.searchResults}>
-            <li>
-                <ResultCard />
-            </li>
-            <li>
-                <ResultCard />
-            </li>
-            <li>
-                <ResultCard />
-            </li>
-            <li>
-                <ResultCard />
-            </li>
-        </ul>
+        <div className="container">
+            <ul className={styles.searchResults}>
+                <li>
+                    <ResultCard />
+                </li>
+                <li>
+                    <ResultCard />
+                </li>
+                <li>
+                    <ResultCard />
+                </li>
+                <li>
+                    <ResultCard />
+                </li>
+            </ul>
+        </div>
     );
 }
 

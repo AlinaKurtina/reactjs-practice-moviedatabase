@@ -5,13 +5,15 @@ import styles from './Navigation.module.css';
 function Navigation() {
     return (
         <nav className={styles.nav}>
-            <Logo />
-            <ul className={styles.links}>
-                <li><a>Movies</a></li>
-                <li><a>TV Shows</a></li>
-                <li><a>People</a></li>
-            </ul>
-            <Search />
+            <div className="container">
+                <Logo />
+                <ul className={styles.links}>
+                    <li><a>Movies</a></li>
+                    <li><a>TV Shows</a></li>
+                    <li><a>People</a></li>
+                </ul>
+                <Search />
+            </div>
         </nav>
     );
 }

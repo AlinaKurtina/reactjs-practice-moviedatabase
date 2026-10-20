@@ -10,6 +10,7 @@
 
 .heading {
     font-family: var(--heading-font);
+    letter-spacing: 0.1em;
 }
 
 .list {

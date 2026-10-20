@@ -24,12 +24,12 @@
 .title {
     font-family: var(--heading-font);
     font-weight: bold;
-    font-size: large;
+    font-size: larger;
+    letter-spacing: 0.1em;
 }
 
 .date {
     opacity: 0.6;
-    font-size: smaller;
 }
 
 .overview {

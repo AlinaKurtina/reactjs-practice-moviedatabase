@@ -1,17 +1,27 @@
 .queryBar {
-    max-width: 100%;
+    width: 100%;
+    display: flex;
+    border: 2px solid var(--button-hovered);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 .input {
     width: 100%;
     min-height: 40px;
-    border: 2px solid var(--button-hovered);
     color: var(--button);
     box-sizing: border-box;
-    padding: 10px;
+    padding-left: 10px;
+    font-size: medium;
 }
 
 .input::placeholder {
     opacity: 0.4;
     color: var(--button);
+}
+
+.searchIcon {
+    margin-top: 10px;
+    margin-left: 5px;
 }

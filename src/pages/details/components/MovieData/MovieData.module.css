@@ -4,7 +4,7 @@
     min-height: 500px;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
     background-color: var(--bg-light);
     color: var(--font-color-light);
     box-shadow: 0px 10px 50px 12px var(--bg-dark) inset;
@@ -16,16 +16,19 @@
     background-color: var(--bg-dark);
     border-radius: 10px;
     border: 1px solid var(--bg-dark);
+    margin-left: 10%;
 }
 
 .metadata {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
+    margin-left: 10%;
 }
 
 .overview {
-    max-width: 350px;
+    max-width: 500px;
 }
 
 .metadataList {
@@ -37,4 +40,5 @@
 .title,
 .overviewHeading {
     font-family: var(--heading-font);
+    letter-spacing: 0.1em;
 }
