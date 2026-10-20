@@ -1,0 +1,36 @@
+:root {
+    --bg-dark: #0a1128;
+    --bg-light: #034078;
+    --bg-transparent: #dbeeff; 
+
+    --font-color-light: #fefcfb;
+    --font-color-dark: #0a1128;
+
+    --button: #018EDC;
+    --button-hovered: #3FB6F8;
+
+    --heading-font: 'Bebas Neue', sans-serif;
+    --body-font: 'Inter', sans-serif;
+
+    --card-bg: #f2f7fc;
+    --card-border: #2c3962;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    list-style: none;
+    text-decoration: none;
+    border: none;
+
+    font-family: var(--body-font);
+}
+
+.extra-data {
+    display: flex;
+    gap: 20px;
+}

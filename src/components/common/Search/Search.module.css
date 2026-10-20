@@ -1,0 +1,21 @@
+.input {
+    padding: 7px;
+    border-radius: 5px;
+    font-family: var(--body-font);
+    font-size: small;
+    max-width: 150px;
+}
+
+.button {
+    margin-left: 5px;
+    background-color: var(--button);
+    padding: 7px;
+    border-radius: 5px;
+    font-size: small;
+    color: var(--font-color-light);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--button-hovered);
+}

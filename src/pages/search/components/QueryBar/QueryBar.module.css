@@ -1,0 +1,17 @@
+.queryBar {
+    max-width: 100%;
+}
+
+.input {
+    width: 100%;
+    min-height: 40px;
+    border: 2px solid var(--button-hovered);
+    color: var(--button);
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.input::placeholder {
+    opacity: 0.4;
+    color: var(--button);
+}

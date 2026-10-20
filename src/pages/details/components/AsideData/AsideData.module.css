@@ -1,0 +1,36 @@
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
+}
+
+.heading {
+    font-family: var(--heading-font);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.keywords {
+    display: flex;
+    gap: 10px;
+}
+
+/* .keyword {
+    background-color: var(--button);
+    padding-left: 7px;
+    border-radius: 5px;
+    font-size: small;
+    cursor: pointer;
+    color: var(--font-color-light);
+}
+
+.keyword:hover {
+    background-color: var(--button-hovered);
+} */

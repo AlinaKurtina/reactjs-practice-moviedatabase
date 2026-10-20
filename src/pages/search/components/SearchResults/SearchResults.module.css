@@ -1,0 +1,6 @@
+.searchResults {
+    display: flex;
+    flex-direction: column;
+    padding: 45px;
+    gap: 15px;
+}

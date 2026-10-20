@@ -1,0 +1,14 @@
+.heroBanner {
+    display: flex;
+    width: 90%;
+    min-height: 300px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.heroBannerImg {
+    width: inherit;
+    height: inherit;
+    background-color: var(--bg-dark);
+    border-radius: 15px;
+}

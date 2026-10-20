@@ -1,0 +1,12 @@
+.keyword {
+    background-color: var(--button);
+    padding: 7px;
+    border-radius: 5px;
+    font-size: small;
+    cursor: pointer;
+    color: var(--font-color-light);
+}
+
+.keyword:hover {
+    background-color: var(--button-hovered);
+}

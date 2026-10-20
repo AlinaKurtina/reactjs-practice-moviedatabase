@@ -1,0 +1,19 @@
+.actorCard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--card-bg);
+    width: 150px;
+    height: 210px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 1px 4px 9px 2px var(--card-border);
+}
+
+.actorPicture {
+    background-color: var(--bg-dark);
+    width: inherit;
+    height: 160px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--bg-dark);
+    color: var(--font-color-light);
+    font-family: var(--heading-font);
+    padding: 17px;
+    max-height: 50px;
+    max-width: 100%;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.links li {
+    cursor: pointer;
+}
+
+.links li:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    max-width: 100%;
+    min-height: 300px;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.heading {
+    font-family: var(--heading-font);
+}
+
+.list {
+    display: flex;
+    max-width: 100%;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 8px;
+    border-radius: 10px;
+
+    scrollbar-width: none;
+    mask-image: linear-gradient(to right, black calc(100% - 20px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 20px), transparent 100%);
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
