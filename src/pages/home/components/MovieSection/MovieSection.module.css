@@ -19,6 +19,7 @@
     max-width: 100%;
     gap: 20px;
     overflow-x: auto;
+    overflow-y: hidden;
     padding: 8px;
     border-radius: 10px;
 

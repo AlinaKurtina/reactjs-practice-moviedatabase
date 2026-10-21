@@ -4,16 +4,18 @@ import Carousel from "./components/Carousel/Carousel";
 import MovieSection from "./components/MovieSection/MovieSection";
 
 function HomePage() {
-    return (
-        <>
-            <Navigation />
-            <Carousel />
-            <MovieSection />
-            <MovieSection />
-            <MovieSection />
-            <Footer />
-        </>
-    )
+  const categories = ['popular', 'top_rated', 'upcoming'];
+
+  return (
+    <>
+      <Navigation />
+      <Carousel />
+      {categories.map(cat => (
+        <MovieSection key={cat} category={cat} />
+      ))}
+      <Footer />
+    </>
+  )
 }
 
 export default HomePage;
