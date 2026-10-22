@@ -17,6 +17,10 @@
 }
 
 .keywords {
-    display: flex;
-    gap: 10px;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 400px;
 }

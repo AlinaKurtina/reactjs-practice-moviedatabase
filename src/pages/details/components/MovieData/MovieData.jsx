@@ -1,19 +1,19 @@
 import styles from './MovieData.module.css';
-import '../../../../styles/global.css';
-import { urls } from '../../../../services/urls';
+import '@/styles/global.css';
+import { urls } from '@/services/urls';
 
 function MovieData({ title, date, genres, duration, overview, imgUrl }) {
   return (
     <main className={styles.container}>
       <div className="container">
-        {imgUrl ? <img src={`${urls.image_path_big}${imgUrl}`} alt={title} /> : <div className={styles.placeholderPoster}></div>}
+        {imgUrl ? <img src={`${urls.image_path_big}${imgUrl}`} alt={title} className={styles.poster} /> : <div className={styles.placeholderPoster}></div>}
         <div className={styles.metadata}>
           <div>
             <h2 className={styles.title}>{title}</h2>
             <ul className={styles.metadataList}>
-              <li><span>{date}</span></li>
-              <li><span>{genres.map(genre => (genre.name)).join(", ")}</span></li>
-              <li><span>{duration}</span></li>
+              <li><span>{date}</span></li>●
+              <li><span>{genres.map(genre => (genre.name)).join(", ")}</span></li>●
+              <li><span>{duration} mins</span></li>
             </ul>
           </div>
           <div>

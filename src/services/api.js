@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const api = createApi(
   {
     baseQuery: fetchBaseQuery({
-      baseUrl: 'https://api.themoviedb.org/3/movie',
+      baseUrl: 'https://api.themoviedb.org/3/movie/',
       prepareHeaders: (headers) => {
         headers.set('authorization', `Bearer ${import.meta.env.VITE_API_KEY}`)
       }
@@ -12,22 +12,34 @@ export const api = createApi(
       getMovieList: build.query({
         query({ category }) {
           return {
-            url: `/${category}`,
+            url: `${category}`,
           }
         }
       }),
       getMovieDetails: build.query({
         query({ id }) {
           return {
-            url: `/${id}`,
+            url: `${id}`,
+          }
+        }
+      }),
+      getMovieKeywords: build.query({
+        query({ id }) {
+          return {
+            url: `${id}/keywords`,
+          }
+        }
+      }),
+      getMovieCast: build.query({
+        query({ id }) {
+          return {
+            url: `${id}/credits`,
           }
         }
       })
-      // getMovieCast,
-      // getMovieKeywords,
       // getViaSerach,
     })
   }
 )
 
-export const { useGetMovieListQuery, useGetMovieDetailsQuery } = api;
+export const { useGetMovieListQuery, useGetMovieDetailsQuery, useGetMovieKeywordsQuery, useGetMovieCastQuery } = api;
