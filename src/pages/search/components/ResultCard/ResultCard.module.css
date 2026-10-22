@@ -3,15 +3,26 @@
     background-color: var(--card-bg);
     border-radius: 10px;
     box-shadow: 1px 1px 10px 0.5px var(--button);
+    cursor: pointer;
+    color: var(--bg-dark);
 }
 
-.image {
+.imagePlaceholder {
     width: 150px;
     height: 200px;
     background-color: var(--bg-light);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     flex-shrink: 0;
+}
+
+.image {
+    width: 150px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
 .metadata {

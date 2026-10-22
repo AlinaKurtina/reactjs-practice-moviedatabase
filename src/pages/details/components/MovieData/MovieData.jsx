@@ -11,8 +11,8 @@ function MovieData({ title, date, genres, duration, overview, imgUrl }) {
           <div>
             <h2 className={styles.title}>{title}</h2>
             <ul className={styles.metadataList}>
-              <li><span>{date}</span></li>●
-              <li><span>{genres.map(genre => (genre.name)).join(", ")}</span></li>●
+              <li><span>{date}</span></li>•
+              <li><span>{genres.map(genre => (genre.name)).join(", ")}</span></li>•
               <li><span>{duration} mins</span></li>
             </ul>
           </div>

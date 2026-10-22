@@ -7,7 +7,7 @@ function CastData({ cast }) {
       <h2 className={styles.heading}>Cast</h2>
       <ul className={styles.list}>
         {cast.map(cm => (
-          <li>
+          <li key={cm.id}>
             <ActorCard actorName={cm.name} imgUrl={cm.profile_path} />
           </li>
         ))}
