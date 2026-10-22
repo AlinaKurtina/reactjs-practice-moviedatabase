@@ -5,16 +5,10 @@
     margin-inline: auto;
 }
 
-.flex-row-g20-center {
+.flex-row-gS-center {
     display: flex;
     flex-direction: row;
     gap: 20px;
     align-items: center;
     justify-content: center;
 }
-
-/* 
-spacing-s
-spacing-m
-spacing-l
-spacing-xl */

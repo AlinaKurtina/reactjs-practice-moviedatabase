@@ -1,28 +1,24 @@
 import styles from './MovieData.module.css';
 import '../../../../styles/global.css';
+import { urls } from '../../../../services/urls';
 
-function MovieData() {
+function MovieData({ title, date, genres, duration, overview, imgUrl }) {
   return (
     <main className={styles.container}>
       <div className="container">
-        <div className={styles.poster}></div>
+        {imgUrl ? <img src={`${urls.image_path_big}${imgUrl}`} alt={title} /> : <div className={styles.placeholderPoster}></div>}
         <div className={styles.metadata}>
           <div>
-            <h2 className={styles.title}>Movie Title</h2>
+            <h2 className={styles.title}>{title}</h2>
             <ul className={styles.metadataList}>
-              <li><span>Date</span></li>
-              <li><span>Genres</span></li>
-              <li><span>Duration</span></li>
+              <li><span>{date}</span></li>
+              <li><span>{genres.map(genre => (genre.name)).join(", ")}</span></li>
+              <li><span>{duration}</span></li>
             </ul>
           </div>
           <div>
             <h3 className={styles.overviewHeading}>Overview</h3>
-            <p className={styles.overview}>
-              Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Ipsam hic temporibus doloremque voluptatum rem corporis
-              nesciunt quas eos libero voluptatem magnam, quam distinctio ea
-              dolor voluptas quos esse architecto impedit?
-            </p>
+            <p className={styles.overview}>{overview}</p>
           </div>
         </div>
       </div>

@@ -16,7 +16,13 @@ export const api = createApi(
           }
         }
       }),
-      // getMovieDetails,
+      getMovieDetails: build.query({
+        query({ id }) {
+          return {
+            url: `/${id}`,
+          }
+        }
+      })
       // getMovieCast,
       // getMovieKeywords,
       // getViaSerach,
@@ -24,4 +30,4 @@ export const api = createApi(
   }
 )
 
-export const { useGetMovieListQuery } = api;
+export const { useGetMovieListQuery, useGetMovieDetailsQuery } = api;

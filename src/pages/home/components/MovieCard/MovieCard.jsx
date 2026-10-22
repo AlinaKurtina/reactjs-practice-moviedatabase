@@ -1,9 +1,10 @@
 import styles from './MovieCard.module.css';
+import { urls } from '../../../../services/urls';
 
-function MovieCard({ title, date, imgUrl }) {
+function MovieCard({ title, date, imgUrl, handleClick }) {
   return (
-    <div className={styles.card}>
-      {imgUrl ? <img src={`https://image.tmdb.org/t/p/w342${imgUrl}`} alt={title} className={styles.cover} /> 
+    <div className={styles.card} onClick={handleClick}>
+      {imgUrl ? <img src={`${urls.image_path_small}${imgUrl}`} alt={title} className={styles.cover} /> 
       : <div className={styles.placeholderCover}></div>}
       <div className={styles.data}>
         <span className={styles.title}>{title}</span>
