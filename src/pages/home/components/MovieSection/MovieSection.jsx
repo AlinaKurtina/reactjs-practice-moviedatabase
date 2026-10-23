@@ -1,22 +1,21 @@
 import MovieCard from '../MovieCard/MovieCard.jsx';
 import styles from './MovieSection.module.css';
 import { useGetMovieListQuery } from '@/services/api.js';
-import Loader from '@/components/common/Loader/Loader.jsx';
-// import { useDispatch } from 'react-redux';
-// import { setCurrentMovieId } from '../../../../store/movieSlice.js';
+import ErrorMessage from '@/components/layout/ErrorMessage/ErrorMessage.jsx';
 
 import { Link } from 'react-router';
+import HomePageSkeleton from '../HomePageSkeleton/HomePageSkeleton.jsx';
+
 
 function MovieSection({ category }) {
-  const { data, isLoading, error } = useGetMovieListQuery({ category });
-  // const dispatch = useDispatch();
+  const { data, isLoading, isError } = useGetMovieListQuery({ category });
 
   if (isLoading) {
-    return <Loader />
+    return <HomePageSkeleton />
   }
 
-  if (error) {
-    console.log(error);
+  if (isError) {
+    <ErrorMessage />
   }
 
   return (

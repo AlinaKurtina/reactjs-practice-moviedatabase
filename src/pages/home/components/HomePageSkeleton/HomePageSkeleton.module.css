@@ -1,0 +1,84 @@
+/* Shimmer Animation Base */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-dark) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    var(--bg-dark) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* --- MovieSection Container --- */
+.sectionSkeleton {
+  display: flex;
+  max-width: 100%;
+  min-height: 300px;
+  align-items: center;
+  padding: 20px;
+  margin-top: 10px;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.headingSkeleton {
+  width: 140px;
+  height: 24px;
+}
+
+.listSkeleton {
+  display: flex;
+  max-width: 100%;
+  gap: 20px;
+  overflow-x: hidden;
+  padding: 8px;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+/* --- Inline MovieCard Skeleton --- */
+.cardSkeleton {
+  width: 200px;
+  height: 320px;
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  box-shadow: 1px 4px 9px 2px var(--card-border);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.coverSkeleton {
+  width: 200px;
+  height: 260px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dataSkeleton {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+}
+
+.titleSkeleton {
+  width: 80%;
+  height: 16px;
+}
+
+.dateSkeleton {
+  width: 50%;
+  height: 12px;
+}

@@ -6,7 +6,8 @@ import MovieData from "@/pages/details/components/MovieData/MovieData";
 
 import { useGetMovieCastQuery, useGetMovieDetailsQuery, useGetMovieKeywordsQuery } from "@/services/api";
 import { useParams } from "react-router";
-import Loader from "@/components/common/Loader/Loader";
+import ErrorMessage from "@/components/layout/ErrorMessage/ErrorMessage";
+import MovieDetailsSkeleton from "./components/MovieDetailsSkeleton/MovieDetailsSkeleton";
 
 function MovieDetailsPage() {
   const { id } = useParams();
@@ -23,12 +24,11 @@ function MovieDetailsPage() {
   } = useGetMovieCastQuery({ id });
 
   if (error || keywordsError || castError) {
-    console.log(error);
-    console.log(keywordsError);
+    return <ErrorMessage />
   }
 
   if (isLoading || keywordsLoading || castLoading) {
-    return <Loader />
+    return <MovieDetailsSkeleton />
   }
 
   const movie = data;

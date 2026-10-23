@@ -2,9 +2,10 @@ import Footer from "@/components/layout/Footer/Footer";
 import Navigation from "@/components/layout/Navigation/Navigation";
 import QueryBar from "./components/QueryBar/QueryBar";
 import SearchResults from "./components/SearchResults/SearchResults";
+import SearchPageSkeleton from "./components/SearchPageSkeleton/SearchPageSkeleton";
+
 import { useGetMoviesViaSearchQuery } from "@/services/api";
 import { useSearchParams } from "react-router";
-import Loader from "@/components/common/Loader/Loader";
 
 function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -12,7 +13,7 @@ function SearchPage() {
   const { data, isLoading, error } = useGetMoviesViaSearchQuery({ str: query });
 
   if (isLoading) {
-    return <Loader />
+    return <SearchPageSkeleton />
   }
 
   if (error) {
