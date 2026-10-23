@@ -5,7 +5,7 @@ import AsideData from "@/pages/details/components/AsideData/AsideData";
 import MovieData from "@/pages/details/components/MovieData/MovieData";
 
 import { useGetMovieCastQuery, useGetMovieDetailsQuery, useGetMovieKeywordsQuery } from "@/services/api";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import Loader from "@/components/common/Loader/Loader";
 

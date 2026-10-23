@@ -1,15 +1,15 @@
 import MovieCard from '../MovieCard/MovieCard.jsx';
 import styles from './MovieSection.module.css';
-import { useGetMovieListQuery } from '../../../../services/api.js';
-import Loader from '../../../../components/common/Loader/Loader.jsx';
-import { useDispatch } from 'react-redux';
-import { setCurrentMovieId } from '../../../../store/movieSlice.js';
+import { useGetMovieListQuery } from '@/services/api.js';
+import Loader from '@/components/common/Loader/Loader.jsx';
+// import { useDispatch } from 'react-redux';
+// import { setCurrentMovieId } from '../../../../store/movieSlice.js';
 
 import { Link } from 'react-router';
 
 function MovieSection({ category }) {
   const { data, isLoading, error } = useGetMovieListQuery({ category });
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   if (isLoading) {
     return <Loader />
@@ -28,10 +28,7 @@ function MovieSection({ category }) {
             <li key={movie.id}>
               <Link to={`/movie/${movie.id}`}>
                 <MovieCard title={movie.title}
-                  date={movie.release_date} imgUrl={movie.poster_path} handleClick={() => {
-                    dispatch(setCurrentMovieId(movie.id));
-                    console.log('i swear ive worked')
-                  }} />
+                  date={movie.release_date} imgUrl={movie.poster_path} />
               </Link>
             </li>
           ))}

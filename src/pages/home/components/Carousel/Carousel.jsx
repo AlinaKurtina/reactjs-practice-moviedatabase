@@ -1,14 +1,24 @@
 import styles from './Carousel.module.css';
 
+const imagesFromFolder = import.meta.glob('@/assets/carousel/*.webp', { eager: true });
+const images = Object.values(imagesFromFolder).map((img) => img.default);
+
 function Carousel() {
-    return (
-        <div className="container">
-            <div className={styles.heroBanner}>
-                <div className={styles.heroBannerImg}></div>
-                <div className={styles.heroBannerControls}></div>
+  return (
+    <div className="container">
+      <div className={styles.heroBanner}>
+        <p className={styles.p}>See what's now playing</p>
+        <div className={styles.heroBannerImgs}>
+          {images.map(img => (
+            <div className={styles.imgBackground}>
+              <img src={`${img}`} alt="heroBannerImage" className={styles.heroBannerImg} />
             </div>
+          ))}
         </div>
-    );
+        <div className={styles.heroBannerControls}></div>
+      </div>
+    </div>
+  );
 }
 
 export default Carousel;
