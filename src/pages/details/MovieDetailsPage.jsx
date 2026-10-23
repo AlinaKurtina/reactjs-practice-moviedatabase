@@ -1,5 +1,3 @@
-import Navigation from "@/components/layout/Navigation/Navigation";
-import Footer from "@/components/layout/Footer/Footer.jsx";
 import CastData from "@/pages/details/components/CastData/CastData";
 import AsideData from "@/pages/details/components/AsideData/AsideData";
 import MovieData from "@/pages/details/components/MovieData/MovieData";
@@ -36,7 +34,6 @@ function MovieDetailsPage() {
 
   return (
     <>
-      <Navigation />
       <MovieData title={movie.title} date={movie.release_date}
         genres={movie.genres} duration={movie.runtime} overview={movie.overview}
         imgUrl={movie.poster_path} backdropUrl={movie.backdrop_path}
@@ -45,7 +42,6 @@ function MovieDetailsPage() {
         <CastData cast={actorData} />
         <AsideData status={movie.status} language={movie.spoken_languages[0]?.english_name} budget={movie.budget} keywords={keywordData.keywords} />
       </div>
-      <Footer />
     </>
   )
 }

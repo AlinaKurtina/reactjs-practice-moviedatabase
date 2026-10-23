@@ -10,8 +10,8 @@ function Carousel() {
         <p className={styles.p}>See what's now playing</p>
         <div className={styles.heroBannerImgs}>
           {images.map(img => (
-            <div className={styles.imgBackground}>
-              <img src={`${img}`} alt="heroBannerImage" className={styles.heroBannerImg} />
+            <div className={styles.imgBackground} key={img}>
+              <img src={img} alt="heroBannerImage" className={styles.heroBannerImg} />
             </div>
           ))}
         </div>
