@@ -25,3 +25,7 @@
     margin-top: 10px;
     margin-left: 5px;
 }
+
+.queryBar:focus-within {
+    box-shadow: 1px 1px 5px 1px var(--button);
+}

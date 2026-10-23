@@ -2,7 +2,7 @@
     display: flex;
     background-color: var(--card-bg);
     border-radius: 10px;
-    box-shadow: 1px 1px 10px 0.5px var(--button);
+    box-shadow: 1px 1px 5px 0.5px var(--button);
     cursor: pointer;
     color: var(--bg-dark);
 }

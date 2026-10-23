@@ -6,6 +6,10 @@
   max-width: 200px;
 }
 
+.input:focus {
+    box-shadow: 1px 1px 5px 1px var(--button);
+}
+
 .button {
   margin-left: 5px;
   background-color: var(--button);

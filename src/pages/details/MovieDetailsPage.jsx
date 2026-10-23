@@ -5,7 +5,6 @@ import AsideData from "@/pages/details/components/AsideData/AsideData";
 import MovieData from "@/pages/details/components/MovieData/MovieData";
 
 import { useGetMovieCastQuery, useGetMovieDetailsQuery, useGetMovieKeywordsQuery } from "@/services/api";
-// import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 import Loader from "@/components/common/Loader/Loader";
 
@@ -40,11 +39,11 @@ function MovieDetailsPage() {
       <Navigation />
       <MovieData title={movie.title} date={movie.release_date}
         genres={movie.genres} duration={movie.runtime} overview={movie.overview}
-        imgUrl={movie.poster_path}
+        imgUrl={movie.poster_path} backdropUrl={movie.backdrop_path}
       />
       <div className="flex-row-gS-center">
         <CastData cast={actorData} />
-        <AsideData status={movie.status} language={movie.spoken_languages[0].english_name} budget={movie.budget} keywords={keywordData.keywords} />
+        <AsideData status={movie.status} language={movie.spoken_languages[0]?.english_name} budget={movie.budget} keywords={keywordData.keywords} />
       </div>
       <Footer />
     </>

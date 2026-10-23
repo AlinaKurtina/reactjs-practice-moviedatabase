@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 
 import { ApiProvider } from "@reduxjs/toolkit/query/react";
 import { api } from './services/api.js';
+import ErrorMessage from "./components/layout/ErrorMessage/ErrorMessage.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/movie/:id' element={<MovieDetailsPage />} />
           <Route path='/search/' element={<SearchPage />} />
+          <Route path="/error" element={<ErrorMessage />} />
         </Routes>
       </BrowserRouter>
     </ApiProvider>

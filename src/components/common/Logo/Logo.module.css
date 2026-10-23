@@ -7,4 +7,5 @@
 .heading {
     font-family: var(--heading-font);
     letter-spacing: 0.1em;
+    color: var(--font-color-light);
 }
