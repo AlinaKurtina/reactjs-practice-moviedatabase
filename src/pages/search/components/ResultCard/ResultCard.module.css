@@ -5,6 +5,7 @@
     box-shadow: 1px 1px 5px 0.5px var(--button);
     cursor: pointer;
     color: var(--bg-dark);
+    transition: transform ease-out 100ms;
 }
 
 .imagePlaceholder {
@@ -45,4 +46,8 @@
 
 .overview {
     margin: 0;
+}
+
+.resultCard:hover {
+    transform: scale(0.99);
 }

@@ -44,3 +44,14 @@
     text-shadow: 10px 10px 3px var(--bg-dark);
     width: fit-content;
 }
+
+@media screen and (max-width: 676px) {
+
+    .heroBanner {
+        height: 280px;
+    }
+
+    .p {
+        font-size: x-large;
+    }
+}

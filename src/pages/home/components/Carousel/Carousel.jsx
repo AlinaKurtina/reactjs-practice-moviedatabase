@@ -11,7 +11,7 @@ function Carousel() {
         <div className={styles.heroBannerImgs}>
           {images.map(img => (
             <div className={styles.imgBackground} key={img}>
-              <img src={img} alt="heroBannerImage" className={styles.heroBannerImg} />
+              <img src={img} alt="heroBannerImage" className={styles.heroBannerImg} fetchPriority='high'/>
             </div>
           ))}
         </div>

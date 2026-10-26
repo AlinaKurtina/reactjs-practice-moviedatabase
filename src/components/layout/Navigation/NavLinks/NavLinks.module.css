@@ -1,0 +1,21 @@
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 22%;
+    margin-right: 22%;
+}
+
+.links li {
+    cursor: pointer;
+}
+
+.links li:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 676px) {
+    .links {
+        display: none;
+    }
+}

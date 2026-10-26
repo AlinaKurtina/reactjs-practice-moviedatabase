@@ -58,3 +58,22 @@
 .card:hover {
     transform: translateY(-10px);
 }
+
+@media screen and (max-width: 676px) {
+    .card {
+        width: 150px;
+        height: 230px;
+    }
+
+    .cover {
+        width: 150px;
+        height: 185px;
+        object-fit: cover;
+    }
+
+    .data {
+        padding-top: 1px;
+        font-size: smaller;
+
+}
+}

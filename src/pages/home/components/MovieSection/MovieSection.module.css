@@ -4,6 +4,8 @@
     min-height: 300px;
     align-items: center;
     padding: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
     margin-top: 10px;
     gap: 10px;
     flex-direction: column;
@@ -33,4 +35,11 @@
 
 .list::-webkit-scrollbar {
     display: none;
+}
+
+@media screen and (max-width: 676px) {
+    .list {
+        max-width: 90vw;
+    }
+
 }
