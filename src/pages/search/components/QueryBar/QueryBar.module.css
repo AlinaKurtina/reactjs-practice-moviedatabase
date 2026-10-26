@@ -1,15 +1,17 @@
 .queryBar {
-    width: 100%;
+    min-width: 90vw;
     display: flex;
     border: 2px solid var(--button-hovered);
     padding: 10px;
     border-radius: 10px;
-    margin-top: 10px;
+    top: 8%;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
 }
 
 .input {
     width: 100%;
-    min-height: 40px;
     color: var(--button);
     box-sizing: border-box;
     padding-left: 10px;
@@ -22,7 +24,7 @@
 }
 
 .searchIcon {
-    margin-top: 10px;
+    padding: 3px;
     margin-left: 5px;
 }
 

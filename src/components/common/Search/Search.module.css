@@ -27,9 +27,10 @@
 .searchButton {
   background-color: transparent;
   display: none;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 676px) {
+@media screen and (max-width: 1400px) {
   .input {
     display: none;
   }

@@ -7,22 +7,25 @@
     left: 250px;
     z-index: 99;
     height: 100%;
+    animation: openMenu 0.2s ease-out forwards;
 }
 
 .linksHamburger li {
     padding: 15px;
 }
 
-.linksHamburger::after {
-    content: "";
-    background-color: var(--bg-dark);
-    z-index: -1;
-    position: fixed;
-    opacity: 0.4;
-    inset: 0;
-}
-
 .hamburger {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+@keyframes openMenu {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

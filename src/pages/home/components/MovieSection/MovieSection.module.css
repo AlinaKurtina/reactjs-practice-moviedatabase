@@ -40,6 +40,8 @@
 @media screen and (max-width: 676px) {
     .list {
         max-width: 90vw;
+        mask-image: linear-gradient(to right, black calc(100% - 10px), transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, black calc(100% - 10px), transparent 100%);
     }
 
 }

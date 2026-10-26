@@ -5,7 +5,7 @@ import { debounce } from '@/utils/debounce';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 
-function Search() {
+function Search({showQueryBar, setShowQueryBar}) {
   const [inputValue, setInputValue] = useState('');
   const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ function Search() {
         />
         <button className={styles.button} type="submit">Search</button>
       </form>
-      <button className={styles.searchButton}>
+      <button className={styles.searchButton} onClick={() => setShowQueryBar(!showQueryBar)}>
         <img src={search_icon} />
       </button>
     </>

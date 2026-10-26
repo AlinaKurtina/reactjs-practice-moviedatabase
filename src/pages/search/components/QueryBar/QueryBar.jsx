@@ -16,12 +16,12 @@ function QueryBar({ prevQuery }) {
 
   return (
     <div className="container">
-      <form className={styles.queryBar} onKeyDown={(e) => e.key === 'Enter' ? handleSearch : null}>
+      <form className={styles.queryBar} onKeyDown={(e) => e.key === 'Enter' ? handleSearch(e) : null}>
         <img src={search_icon} width={20} height={20} className={styles.searchIcon} />
         <input
           name="query"
           type="text"
-          placeholder={`results for ${prevQuery}..`}
+          placeholder={prevQuery ? `results for ${prevQuery}...` : `start searching...`}
           className={styles.input}
           value={inputValue}
           onChange={(e) => setInputValue(e.currentTarget.value)}
