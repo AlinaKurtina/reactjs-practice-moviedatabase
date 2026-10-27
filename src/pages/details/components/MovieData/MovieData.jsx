@@ -1,6 +1,8 @@
 import styles from './MovieData.module.css';
 import '@/styles/global.css';
 import { urls } from '@/services/urls';
+import { dateFormatter } from '@/utils/dateFormatter';
+import { timeFormatter } from '@/utils/timeFormatter';
 
 function MovieData({ title, date, genres, duration, overview, imgUrl, backdropUrl }) {
   return (
@@ -16,9 +18,9 @@ function MovieData({ title, date, genres, duration, overview, imgUrl, backdropUr
           <div>
             <h2 className={styles.title}>{title}</h2>
             <ul className={styles.metadataList}>
-              <li><span>{date}</span></li>•
+              <li><span>{dateFormatter(date)}</span></li>•
               <li><span>{genres.map(genre => (genre.name)).join(", ")}</span></li>•
-              <li><span>{duration} mins</span></li>
+              <li><span>{timeFormatter(duration)}</span></li>
             </ul>
           </div>
           <div>

@@ -1,5 +1,6 @@
 import styles from './MovieCard.module.css';
-import { urls } from '../../../../services/urls';
+import { urls } from '@/services/urls';
+import { dateFormatter } from '@/utils/dateFormatter';
 
 function MovieCard({ title, date, imgUrl, handleClick }) {
   return (
@@ -8,7 +9,7 @@ function MovieCard({ title, date, imgUrl, handleClick }) {
       : <div className={styles.placeholderCover}></div>}
       <div className={styles.data}>
         <span className={styles.title}>{title}</span>
-        <span className={styles.date}>{date}</span>
+        <span className={styles.date}>{dateFormatter(date)}</span>
       </div>
     </div>
   );
