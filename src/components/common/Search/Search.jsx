@@ -4,8 +4,9 @@ import { debounce } from '@/utils/debounce';
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import Dropdown from '../Dropdown/Dropdown';
 
-function Search({showQueryBar, setShowQueryBar}) {
+function Search({ showQueryBar, setShowQueryBar }) {
   const [inputValue, setInputValue] = useState('');
   const navigate = useNavigate();
 
@@ -18,15 +19,18 @@ function Search({showQueryBar, setShowQueryBar}) {
 
   return (
     <>
-      <form className="search" onSubmit={handleSearch} onKeyDown={(e) => e.key === "Enter" ? handleSearch : null}>
+      <form className={styles.searchForm} onSubmit={handleSearch} onKeyDown={(e) => e.key === "Enter" ? handleSearch : null}>
         <input
           className={styles.input}
           type="text"
           placeholder="Start looking for movies..."
           value={inputValue}
-          onChange={(e) => setInputValue(e.currentTarget.value)}
+          onChange={(e) => {
+            debounce(setInputValue(e.currentTarget.value));
+          }}
         />
         <button className={styles.button} type="submit">Search</button>
+        {inputValue && <Dropdown query={inputValue} />}
       </form>
       <button className={styles.searchButton} onClick={() => setShowQueryBar(!showQueryBar)}>
         <img src={search_icon} />

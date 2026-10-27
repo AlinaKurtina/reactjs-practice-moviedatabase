@@ -1,0 +1,44 @@
+.p {
+    color: var(--button);
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    top: 40px;
+    font-size: small;
+}
+
+.ul {
+    background-color: white;
+    color: var(--button-hovered);
+    max-width: inherit;
+    height: fit-content;
+    position: absolute;
+    z-index: 1001;
+    cursor: pointer;
+    top: 40px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    padding: 5px;
+    padding-top: 0px;
+    border: 1px solid var(--button-hovered);
+    border-top: none;
+    font-size: small;
+}
+
+.ul li {
+    padding: 5px;
+    border-bottom: 1px solid var(--separator);
+}
+
+.ul li:hover {
+    background-color: var(--bg-transparent);
+}
+
+.div {
+    display: flex;
+}

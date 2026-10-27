@@ -28,6 +28,11 @@
   background-color: transparent;
   display: none;
   cursor: pointer;
+  margin-left: auto;
+}
+
+.searchForm {
+  position: relative;
 }
 
 @media screen and (max-width: 1400px) {

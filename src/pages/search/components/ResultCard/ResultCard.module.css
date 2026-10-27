@@ -6,6 +6,7 @@
     cursor: pointer;
     color: var(--bg-dark);
     transition: transform ease-out 100ms;
+    max-height: 200px;
 }
 
 .imagePlaceholder {
@@ -46,8 +47,27 @@
 
 .overview {
     margin: 0;
+    overflow-y: auto;
 }
 
 .resultCard:hover {
     transform: scale(0.99);
+}
+
+@media screen and (max-width: 676px) {
+    .resultCard {
+        max-height: 180px;
+    }
+
+    .imagePlaceholder {
+        height: 180px;
+    }
+
+    .image {
+        height: 180px;
+    }
+
+    .metadata {
+        font-size: small;
+    }
 }

@@ -16,6 +16,8 @@
 
     --card-bg: #f2f7fc;
     --card-border: #2c3962;
+
+    --separator: rgba(212, 223, 230, 0.708);
 }
 
 * {
