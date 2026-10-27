@@ -12,3 +12,14 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 1330px) {
+    .flex-row-gS-center {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

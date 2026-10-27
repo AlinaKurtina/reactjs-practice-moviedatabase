@@ -1,5 +1,7 @@
 import styles from './AsideData.module.css';
 import Keyword from '@/components/common/Keyword/Keyword.jsx';
+import { Fragment } from 'react';
+
 
 function AsideData({ status, language, budget, keywords }) {
   return (
@@ -18,13 +20,13 @@ function AsideData({ status, language, budget, keywords }) {
       </div>
       <div className={styles.item}>
         <span className={styles.heading}>Keywords</span>
-        <ul className={styles.keywords}>
+        <div className={styles.keywords}>
           {keywords.map(kw => (
-            <li key={kw.id}>
+            <Fragment key={kw.id}>
               <Keyword keyword={kw.name} />
-            </li>
+            </Fragment>
           ))}
-        </ul>
+        </div>
       </div>
     </aside>
   );

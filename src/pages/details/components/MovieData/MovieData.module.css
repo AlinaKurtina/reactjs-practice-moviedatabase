@@ -7,7 +7,6 @@
     gap: 10px;
     color: var(--font-color-light);
     box-shadow: 0px 0px 100px 150px var(--bg-dark) inset;
-    object-position: center;
 }
 
 .placeholderPoster {
@@ -26,6 +25,7 @@
     border-radius: 10px;
     border: 1px solid var(--bg-dark);
     margin-left: 10%;
+    object-fit: cover;
 }
 
 .metadata {
@@ -50,4 +50,25 @@
 .overviewHeading {
     font-family: var(--heading-font);
     letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 676px) {
+    .placeholderPoster {
+        width: 200px;
+        height: 300px;
+    }
+
+    .poster {
+        width: 200px;
+        height: 300px;
+    }
+
+    .metadata {
+        font-size: smaller;
+        gap: 10px;
+        margin: 5%;
+        margin-top: 0px;
+    }
+
+
 }

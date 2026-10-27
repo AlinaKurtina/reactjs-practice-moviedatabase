@@ -4,7 +4,12 @@ import { urls } from '@/services/urls';
 
 function MovieData({ title, date, genres, duration, overview, imgUrl, backdropUrl }) {
   return (
-    <main className={styles.container} style={{ backgroundImage: `url(${urls.image_path_original}${backdropUrl})` }}>
+    <main className={styles.container} style={{ 
+      backgroundImage: `url(${urls.image_path_original}${backdropUrl})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+      }}>
       <div className="container">
         {imgUrl ? <img src={`${urls.image_path_big}${imgUrl}`} alt={title} className={styles.poster} /> : <div className={styles.placeholderPoster}></div>}
         <div className={styles.metadata}>

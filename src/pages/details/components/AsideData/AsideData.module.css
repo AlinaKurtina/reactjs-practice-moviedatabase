@@ -26,3 +26,18 @@
     max-height: 300px;
     overflow-y: auto;
 }
+
+@media screen and (max-width: 1330px) {
+    .data {
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 50%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .keywords {
+        max-width: inherit;
+        justify-content: center;
+    }
+}
