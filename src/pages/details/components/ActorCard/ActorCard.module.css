@@ -1,34 +1,34 @@
 .actorCard {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background-color: var(--card-bg);
-    width: 150px;
-    height: 230px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 1px 4px 9px 2px var(--card-border);
-    cursor: pointer;
-    transition: transform 200ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: var(--card-bg);
+  width: 150px;
+  height: 230px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 1px 4px 9px 2px var(--card-border);
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
 }
 
 .actorPicturePlaceholder {
-    background-color: var(--bg-dark);
-    width: inherit;
-    height: 180px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  background-color: var(--bg-dark);
+  width: inherit;
+  height: 180px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .actorPicture {
-    width: inherit;
-    object-fit: cover;
-    height: 180px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-position: top;
+  width: inherit;
+  object-fit: cover;
+  height: 180px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-position: top;
 }
 
 .actorCard:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }

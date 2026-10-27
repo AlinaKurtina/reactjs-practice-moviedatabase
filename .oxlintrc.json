@@ -7,14 +7,10 @@
   "env": {
     "builtin": true
   },
-  "ignorePatterns": [
-    "dist"
-  ],
+  "ignorePatterns": ["dist"],
   "overrides": [
     {
-      "files": [
-        "**/*.{js,jsx}"
-      ],
+      "files": ["**/*.{js,jsx}"],
       "rules": {
         "constructor-super": "error",
         "for-direction": "error",
@@ -98,9 +94,7 @@
           }
         ]
       },
-      "plugins": [
-        "react"
-      ],
+      "plugins": ["react"],
       "env": {
         "browser": true
       }

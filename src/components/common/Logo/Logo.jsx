@@ -1,5 +1,5 @@
-import styles from './Logo.module.css';
-import icon from '../../../assets/icon.png';
+import styles from "./Logo.module.css";
+import icon from "../../../assets/icon.png";
 
 export function Logo() {
   return (

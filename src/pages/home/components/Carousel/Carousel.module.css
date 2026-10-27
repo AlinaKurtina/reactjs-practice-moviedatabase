@@ -1,57 +1,56 @@
 .heroBanner {
-    display: flex;
-    width: 90%;
-    min-height: 300px;
-    margin-top: 20px;
-    margin-left: auto;
-    cursor: pointer;
-    position: relative;
-    color: var(--font-color-light);
+  display: flex;
+  width: 90%;
+  min-height: 300px;
+  margin-top: 20px;
+  margin-left: auto;
+  cursor: pointer;
+  position: relative;
+  color: var(--font-color-light);
 }
 
 .heroBannerImgs {
-    display: flex;
-    width: inherit;
-    height: inherit;
-    border-radius: 15px;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: 15px;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 .heroBannerImg {
-    flex: 0 0 100%;
-    width: 100%;
-    height: 100%;
-    mix-blend-mode: overlay;
-    object-fit: cover;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+  object-fit: cover;
 }
 
 .imgBackground {
-    background-color: var(--bg-light);
-    width: inherit;
-    height: inherit;
+  background-color: var(--bg-light);
+  width: inherit;
+  height: inherit;
 }
 
 .p {
-    position: absolute;
-    top: 70%;
-    left: 8%;
-    font-size: xx-large;
-    font-family: var(--heading-font);
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    text-shadow: 10px 10px 3px var(--bg-dark);
-    width: fit-content;
+  position: absolute;
+  top: 70%;
+  left: 8%;
+  font-size: xx-large;
+  font-family: var(--heading-font);
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-shadow: 10px 10px 3px var(--bg-dark);
+  width: fit-content;
 }
 
 @media screen and (max-width: 676px) {
+  .heroBanner {
+    height: 280px;
+  }
 
-    .heroBanner {
-        height: 280px;
-    }
-
-    .p {
-        font-size: x-large;
-    }
+  .p {
+    font-size: x-large;
+  }
 }

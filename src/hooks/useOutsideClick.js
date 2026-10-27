@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 export function useOutsideClick(handler) {
   const ref = useRef(null);
@@ -9,10 +9,9 @@ export function useOutsideClick(handler) {
         handler(event);
       }
     };
-    document.addEventListener('pointerdown', handleClick);
+    document.addEventListener("pointerdown", handleClick);
 
-    return () => document.removeEventListener('pointerdown', handleClick);
-    ;
+    return () => document.removeEventListener("pointerdown", handleClick);
   }, [handler]);
 
   return ref;

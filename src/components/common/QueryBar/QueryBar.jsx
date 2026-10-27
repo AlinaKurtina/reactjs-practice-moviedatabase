@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import styles from './QueryBar.module.css';
-import search_icon from '@/assets/search.png';
-import { useNavigate } from 'react-router';
-import Dropdown from '../Dropdown/Dropdown';
-import { debounce } from '@/utils/debounce';
-import { useOutsideClick } from '@/hooks/useOutsideClick';
+import { useState } from "react";
+import styles from "./QueryBar.module.css";
+import search_icon from "@/assets/search.png";
+import { useNavigate } from "react-router";
+import Dropdown from "../Dropdown/Dropdown";
+import { debounce } from "@/utils/debounce";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 
 function QueryBar() {
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const ref = useOutsideClick(() => setShowDropdown(false));
 
@@ -22,7 +22,11 @@ function QueryBar() {
 
   return (
     <div className="container">
-      <form className={styles.queryBar} onKeyDown={(e) => e.key === 'Enter' ? handleSearch(e) : null} ref={ref}>
+      <form
+        className={styles.queryBar}
+        onKeyDown={(e) => (e.key === "Enter" ? handleSearch(e) : null)}
+        ref={ref}
+      >
         <img src={search_icon} width={20} height={20} className={styles.searchIcon} />
         <input
           name="query"

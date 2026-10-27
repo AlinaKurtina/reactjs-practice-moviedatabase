@@ -1,25 +1,24 @@
 .container {
-    display: flex;
-    max-width: 1320px;
-    width: 100%;
-    margin-inline: auto;
+  display: flex;
+  max-width: 1320px;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .flex-row-gS-center {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1330px) {
-    .flex-row-gS-center {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-
+  .flex-row-gS-center {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
 }

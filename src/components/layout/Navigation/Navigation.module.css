@@ -1,21 +1,23 @@
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: var(--bg-dark);
-    color: var(--font-color-light);
-    font-family: var(--heading-font);
-    padding: 17px;
-    max-height: 50px;
-    max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--bg-dark);
+  color: var(--font-color-light);
+  font-family: var(--heading-font);
+  padding: 17px;
+  max-height: 50px;
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .mobile {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 676px) {
-    .mobile {
-        display: block;
-    }
+  .mobile {
+    display: block;
+  }
 }

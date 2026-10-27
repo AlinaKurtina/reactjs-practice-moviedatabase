@@ -1,7 +1,7 @@
-import styles from './Keyword.module.css';
+import styles from "./Keyword.module.css";
 
 function Keyword({ keyword }) {
-    return <span className={styles.keyword}>{keyword}</span>;
+  return <span className={styles.keyword}>{keyword}</span>;
 }
 
 export default Keyword;

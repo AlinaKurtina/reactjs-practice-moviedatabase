@@ -1,14 +1,14 @@
 .keyword {
-    background-color: var(--button);
-    padding: 7px;
-    border-radius: 5px;
-    font-size: small;
-    cursor: pointer;
-    color: var(--font-color-light);
-    max-width: fit-content;
-    flex-shrink: 0;
+  background-color: var(--button);
+  padding: 7px;
+  border-radius: 5px;
+  font-size: small;
+  cursor: pointer;
+  color: var(--font-color-light);
+  max-width: fit-content;
+  flex-shrink: 0;
 }
 
 .keyword:hover {
-    background-color: var(--button-hovered);
+  background-color: var(--button-hovered);
 }

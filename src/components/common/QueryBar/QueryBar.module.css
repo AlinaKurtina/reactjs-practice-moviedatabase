@@ -1,34 +1,34 @@
 .queryBar {
-    min-width: 90vw;
-    display: flex;
-    border: 2px solid var(--button-hovered);
-    padding: 10px;
-    border-radius: 10px;
-    top: 8%;
-    position: fixed;
-    z-index: 100;
-    background-color: white;
-    justify-self: center;
+  min-width: 90vw;
+  display: flex;
+  border: 2px solid var(--button-hovered);
+  padding: 10px;
+  border-radius: 10px;
+  top: 8%;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  justify-self: center;
 }
 
 .input {
-    width: 100%;
-    color: var(--button);
-    box-sizing: border-box;
-    padding-left: 10px;
-    font-size: medium;
+  width: 100%;
+  color: var(--button);
+  box-sizing: border-box;
+  padding-left: 10px;
+  font-size: medium;
 }
 
 .input::placeholder {
-    opacity: 0.4;
-    color: var(--button);
+  opacity: 0.4;
+  color: var(--button);
 }
 
 .searchIcon {
-    padding: 3px;
-    margin-left: 5px;
+  padding: 3px;
+  margin-left: 5px;
 }
 
 .queryBar:focus-within {
-    box-shadow: 1px 1px 5px 1px var(--button);
+  box-shadow: 1px 1px 5px 1px var(--button);
 }

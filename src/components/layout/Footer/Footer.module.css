@@ -1,37 +1,37 @@
 .footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--bg-dark);
-    color: var(--font-color-light);
-    padding: 15px;
-    max-width: 100%;
-    min-height: 130px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--bg-dark);
+  color: var(--font-color-light);
+  padding: 15px;
+  max-width: 100%;
+  min-height: 130px;
+  margin-top: 30px;
 }
 
 .contactsHeading {
-    font-family: var(--heading-font);
-    letter-spacing: 0.1em;
+  font-family: var(--heading-font);
+  letter-spacing: 0.1em;
 }
 
 .contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: var(--body-font);
-    margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--body-font);
+  margin-left: auto;
 }
 
 .contactsLink {
-    color: var(--button);
+  color: var(--button);
 }
 
 .contactsLink:visited {
-    color: var(--button-hovered);
+  color: var(--button-hovered);
 }
 
 .contactsLink:hover {
-    color: var(--button-hovered);
-    text-decoration: underline;
+  color: var(--button-hovered);
+  text-decoration: underline;
 }

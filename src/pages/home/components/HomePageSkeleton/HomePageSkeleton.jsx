@@ -1,5 +1,5 @@
-import styles from './HomePageSkeleton.module.css';
-import '@/styles/global.css';
+import styles from "./HomePageSkeleton.module.css";
+import "@/styles/global.css";
 
 function HomePageSkeleton({ count = 6 }) {
   return (

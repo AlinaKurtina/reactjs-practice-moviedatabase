@@ -1,5 +1,5 @@
-import styles from './MovieDetailsSkeleton.module.css';
-import '@/styles/global.css';
+import styles from "./MovieDetailsSkeleton.module.css";
+import "@/styles/global.css";
 
 function MovieDetailsSkeleton() {
   return (
@@ -56,7 +56,10 @@ function MovieDetailsSkeleton() {
             <div className={`${styles.asideHeadingSkeleton} ${styles.shimmer}`}></div>
             <div className={styles.keywordsSkeleton}>
               {Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className={`${styles.keywordBadgeSkeleton} ${styles.shimmer}`}></div>
+                <div
+                  key={index}
+                  className={`${styles.keywordBadgeSkeleton} ${styles.shimmer}`}
+                ></div>
               ))}
             </div>
           </div>

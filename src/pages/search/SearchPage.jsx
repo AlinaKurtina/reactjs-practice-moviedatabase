@@ -6,11 +6,11 @@ import { useSearchParams } from "react-router";
 
 function SearchPage() {
   const [searchParams] = useSearchParams();
-  const query = searchParams.get("query")
+  const query = searchParams.get("query");
   const { data, isLoading, error } = useGetMoviesViaSearchQuery({ str: query });
 
   if (isLoading) {
-    return <SearchPageSkeleton />
+    return <SearchPageSkeleton />;
   }
 
   if (error) {
@@ -23,7 +23,7 @@ function SearchPage() {
     <>
       <SearchResults searchData={searchData} />
     </>
-  )
+  );
 }
 
 export default SearchPage;

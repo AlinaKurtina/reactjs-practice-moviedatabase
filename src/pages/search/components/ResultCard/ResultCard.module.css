@@ -1,73 +1,73 @@
 .resultCard {
-    display: flex;
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px 0.5px var(--button);
-    cursor: pointer;
-    color: var(--bg-dark);
-    transition: transform ease-out 100ms;
-    max-height: 200px;
+  display: flex;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 0.5px var(--button);
+  cursor: pointer;
+  color: var(--bg-dark);
+  transition: transform ease-out 100ms;
+  max-height: 200px;
 }
 
 .imagePlaceholder {
-    width: 150px;
-    height: 200px;
-    background-color: var(--bg-light);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    flex-shrink: 0;
+  width: 150px;
+  height: 200px;
+  background-color: var(--bg-light);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  flex-shrink: 0;
 }
 
 .image {
-    width: 150px;
-    height: 200px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    flex-shrink: 0;
-    object-fit: cover;
+  width: 150px;
+  height: 200px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .metadata {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
 }
 
 .title {
-    font-family: var(--heading-font);
-    font-weight: bold;
-    font-size: larger;
-    letter-spacing: 0.1em;
+  font-family: var(--heading-font);
+  font-weight: bold;
+  font-size: larger;
+  letter-spacing: 0.1em;
 }
 
 .date {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .overview {
-    margin: 0;
-    overflow-y: auto;
+  margin: 0;
+  overflow-y: auto;
 }
 
 .resultCard:hover {
-    transform: scale(0.99);
+  transform: scale(0.99);
 }
 
 @media screen and (max-width: 676px) {
-    .resultCard {
-        max-height: 180px;
-    }
+  .resultCard {
+    max-height: 180px;
+  }
 
-    .imagePlaceholder {
-        height: 180px;
-    }
+  .imagePlaceholder {
+    height: 180px;
+  }
 
-    .image {
-        height: 180px;
-    }
+  .image {
+    height: 180px;
+  }
 
-    .metadata {
-        font-size: small;
-    }
+  .metadata {
+    font-size: small;
+  }
 }

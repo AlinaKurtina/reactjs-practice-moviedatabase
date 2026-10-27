@@ -1,36 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --bg-dark: #0a1128;
-    --bg-light: #034078;
-    --bg-transparent: #dbeeff; 
+  --bg-dark: #0a1128;
+  --bg-light: #034078;
+  --bg-transparent: #dbeeff;
 
-    --font-color-light: #fefcfb;
-    --font-color-dark: #0a1128;
+  --font-color-light: #fefcfb;
+  --font-color-dark: #0a1128;
 
-    --button: #018EDC;
-    --button-hovered: #3FB6F8;
+  --button: #018edc;
+  --button-hovered: #3fb6f8;
 
-    --heading-font: 'Bebas Neue', sans-serif;
-    --body-font: 'Inter', sans-serif;
+  --heading-font: "Bebas Neue", sans-serif;
+  --body-font: "Inter", sans-serif;
 
-    --card-bg: #f2f7fc;
-    --card-border: #2c3962;
+  --card-bg: #f2f7fc;
+  --card-border: #2c3962;
 
-    --separator: rgba(212, 223, 230, 0.708);
+  --separator: rgba(212, 223, 230, 0.708);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    right: 0;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 
-    list-style: none;
-    text-decoration: none;
-    border: none;
-    outline: none;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
 
-    font-family: var(--body-font);
+  font-family: var(--body-font);
 }

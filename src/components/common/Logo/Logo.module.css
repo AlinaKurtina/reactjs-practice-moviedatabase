@@ -1,11 +1,12 @@
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .heading {
-    font-family: var(--heading-font);
-    letter-spacing: 0.1em;
-    color: var(--font-color-light);
+  font-family: var(--heading-font);
+  letter-spacing: 0.1em;
+  color: var(--font-color-light);
+  width: fit-content;
 }

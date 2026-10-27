@@ -1,5 +1,5 @@
-import styles from './SearchPageSkeleton.module.css';
-import '@/styles/global.css';
+import styles from "./SearchPageSkeleton.module.css";
+import "@/styles/global.css";
 
 function SearchPageSkeleton() {
   return (

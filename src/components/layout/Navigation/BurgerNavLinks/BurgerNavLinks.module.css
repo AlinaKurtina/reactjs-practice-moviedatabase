@@ -1,22 +1,22 @@
 .linksHamburger {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bg-dark);
-    padding: 10px;
-    position: fixed;
-    left: 250px;
-    z-index: 99;
-    height: 100%;
-    animation: openMenu 0.2s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  padding: 10px;
+  position: fixed;
+  left: 250px;
+  z-index: 99;
+  height: 100%;
+  animation: openMenu 0.2s ease-out forwards;
 }
 
 .linksHamburger li {
-    padding: 15px;
+  padding: 15px;
 }
 
 .hamburger {
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @keyframes openMenu {
