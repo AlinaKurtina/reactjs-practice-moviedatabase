@@ -1,5 +1,6 @@
 .select {
+  max-height: fit-content;
   border-radius: 5px;
-  margin-left: 15px;
-  padding: 1px;
+  padding: 5px;
+  margin-left: 5px;
 }

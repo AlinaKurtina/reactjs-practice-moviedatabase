@@ -17,6 +17,7 @@ function Navigation() {
     <>
       <nav className={styles.nav}>
         <div className="container">
+          <div className={styles.div}>
           <Link to={"/"}>
             <Logo />
           </Link>
@@ -24,9 +25,12 @@ function Navigation() {
           <div className={styles.mobile}>
             <BurgerNavLinks />
           </div>
-          <Search setShowQueryBar={setShowQueryBar} showQueryBar={showQueryBar} />
+          <div className={styles.flexDiv}>
+            <Search setShowQueryBar={setShowQueryBar} showQueryBar={showQueryBar} />
+            <LanguageChoice />
+          </div>
+          </div>
         </div>
-        <LanguageChoice />
       </nav>
       {showQueryBar && <QueryBar ref={ref} setShowQueryBar={setShowQueryBar} />}
     </>

@@ -16,6 +16,18 @@
   display: none;
 }
 
+.flexDiv {
+  display: flex;
+  gap: 10px;
+}
+
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 @media screen and (max-width: 676px) {
   .mobile {
     display: block;
