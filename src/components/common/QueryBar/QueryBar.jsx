@@ -27,7 +27,9 @@ function QueryBar({ ref, setShowQueryBar }) {
         <form
           className={styles.queryBar}
           onKeyDown={(e) => (e.key === "Enter" ? handleSearch(e) : null)}
-          ref={ref} popover id="popoverSearch"
+          ref={ref}
+          popover
+          id="popoverSearch"
         >
           <img src={search_icon} width={20} height={20} className={styles.searchIcon} />
           <input
@@ -41,7 +43,9 @@ function QueryBar({ ref, setShowQueryBar }) {
               setShowDropdown(true);
             }}
           />
-          {showDropdown && <Dropdown query={inputValue} ref={refDropdown} setShowDropdown={setShowDropdown}/>}
+          {showDropdown && (
+            <Dropdown query={inputValue} ref={refDropdown} setShowDropdown={setShowDropdown} />
+          )}
         </form>
       </div>
     </>

@@ -5,9 +5,11 @@ import ErrorMessage from "@/components/layout/ErrorMessage/ErrorMessage.jsx";
 
 import { Link } from "react-router";
 import HomePageSkeleton from "../HomePageSkeleton/HomePageSkeleton.jsx";
+import { useSelector } from "react-redux";
 
 function MovieSection({ category }) {
-  const { data, isLoading, isError } = useGetMovieListQuery({ category });
+  const currentLang = useSelector((state) => state.lang.value);
+  const { data, isLoading, isError } = useGetMovieListQuery({ category, lang: currentLang });
 
   if (isLoading) {
     return <HomePageSkeleton />;

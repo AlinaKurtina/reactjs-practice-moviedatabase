@@ -10,6 +10,8 @@ import ErrorMessage from "./components/layout/ErrorMessage/ErrorMessage.jsx";
 import React from "react";
 import Navigation from "./components/layout/Navigation/Navigation.jsx";
 import Footer from "./components/layout/Footer/Footer.jsx";
+import { Provider } from "react-redux";
+import { store } from "./store/store.js";
 
 const Layout = () => {
   return (
@@ -23,7 +25,7 @@ const Layout = () => {
 
 function App() {
   return (
-    <ApiProvider api={api}>
+    <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
@@ -34,7 +36,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </ApiProvider>
+    </Provider>
   );
 }
 

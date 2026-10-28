@@ -43,7 +43,11 @@ function Search({ showQueryBar, setShowQueryBar }) {
         </button>
         {showDropdown && inputValue !== "" && <Dropdown query={inputValue} ref={ref} />}
       </form>
-      <button className={styles.searchButton} onClick={() => setShowQueryBar(!showQueryBar)} popoverTarget="popoverSearch">
+      <button
+        className={styles.searchButton}
+        onClick={() => setShowQueryBar(!showQueryBar)}
+        popoverTarget="popoverSearch"
+      >
         <img src={search_icon} alt="searchIcon" />
       </button>
       {showQueryBar && <Backdrop />}

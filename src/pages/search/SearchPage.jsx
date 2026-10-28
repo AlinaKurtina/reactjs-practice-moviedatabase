@@ -3,11 +3,13 @@ import SearchPageSkeleton from "./components/SearchPageSkeleton/SearchPageSkelet
 
 import { useGetMoviesViaSearchQuery } from "@/services/api";
 import { useSearchParams } from "react-router";
+import { useSelector } from "react-redux";
 
 function SearchPage() {
+  const currentLang = useSelector((state) => state.lang.value);
   const [searchParams] = useSearchParams();
   const query = searchParams.get("query");
-  const { data, isLoading, error } = useGetMoviesViaSearchQuery({ str: query });
+  const { data, isLoading, error } = useGetMoviesViaSearchQuery({ str: query, lang: currentLang });
 
   if (isLoading) {
     return <SearchPageSkeleton />;

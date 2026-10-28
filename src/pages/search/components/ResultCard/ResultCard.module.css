@@ -48,6 +48,7 @@
 .overview {
   margin: 0;
   overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .resultCard:hover {

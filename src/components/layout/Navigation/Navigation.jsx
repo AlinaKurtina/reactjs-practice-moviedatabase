@@ -7,6 +7,7 @@ import BurgerNavLinks from "./BurgerNavLinks/BurgerNavLinks";
 import QueryBar from "@/components/common/QueryBar/QueryBar";
 import { useState } from "react";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
+import LanguageChoice from "@/components/common/LanguageChoice/LanguageChoice";
 
 function Navigation() {
   const [showQueryBar, setShowQueryBar] = useState(false);
@@ -25,6 +26,7 @@ function Navigation() {
           </div>
           <Search setShowQueryBar={setShowQueryBar} showQueryBar={showQueryBar} />
         </div>
+        <LanguageChoice />
       </nav>
       {showQueryBar && <QueryBar ref={ref} setShowQueryBar={setShowQueryBar} />}
     </>

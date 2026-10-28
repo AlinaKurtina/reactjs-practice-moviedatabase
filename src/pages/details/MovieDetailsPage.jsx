@@ -10,16 +10,22 @@ import {
 import { useParams } from "react-router";
 import ErrorMessage from "@/components/layout/ErrorMessage/ErrorMessage";
 import MovieDetailsSkeleton from "./components/MovieDetailsSkeleton/MovieDetailsSkeleton";
+import { useSelector } from "react-redux";
 
 function MovieDetailsPage() {
+  const currentLang = useSelector((state) => state.lang.value);
   const { id } = useParams();
-  const { data, isLoading, error } = useGetMovieDetailsQuery({ id });
+  const { data, isLoading, error } = useGetMovieDetailsQuery({ id, lang: currentLang });
   const {
     data: keywordData,
     isLoading: keywordsLoading,
     error: keywordsError,
-  } = useGetMovieKeywordsQuery({ id });
-  const { data: castData, isLoading: castLoading, error: castError } = useGetMovieCastQuery({ id });
+  } = useGetMovieKeywordsQuery({ id, lang: currentLang });
+  const {
+    data: castData,
+    isLoading: castLoading,
+    error: castError,
+  } = useGetMovieCastQuery({ id, lang: currentLang });
 
   if (error || keywordsError || castError) {
     return <ErrorMessage />;
