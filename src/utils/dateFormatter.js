@@ -14,10 +14,11 @@ const months = {
 };
 
 export function dateFormatter(date) {
+  if (!date) return "No information";
   const dateArr = date.split("-");
-  const day = dateArr[2][0].includes("0") ? dateArr[2][1] : dateArr[2];
+  const day = dateArr[2][0].includes("0") ? dateArr[2][1] : dateArr[2]
   const monthKey = Object.keys(months).find((month) => month === dateArr[1]);
   const year = dateArr[0];
 
-  return `${months[monthKey]} ${day}, ${year}`;
+  return `${months[monthKey]} ${day}, ${year}`
 }

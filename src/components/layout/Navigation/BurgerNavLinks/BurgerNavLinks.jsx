@@ -2,6 +2,7 @@ import { useState } from "react";
 import hambg from "@/assets/hamburger.png";
 import styles from "./BurgerNavLinks.module.css";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
+import Backdrop from "@/components/common/Backdrop/Backdrop";
 
 function BurgerNavLinks() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -31,6 +32,7 @@ function BurgerNavLinks() {
           </li>
         </ul>
       ) : null}
+      {isMenuOpen && <Backdrop />}
     </>
   );
 }

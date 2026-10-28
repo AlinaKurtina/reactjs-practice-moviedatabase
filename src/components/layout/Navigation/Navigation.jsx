@@ -26,7 +26,7 @@ function Navigation() {
           <Search setShowQueryBar={setShowQueryBar} showQueryBar={showQueryBar} />
         </div>
       </nav>
-      {showQueryBar && <QueryBar ref={ref} />}
+      {showQueryBar && <QueryBar ref={ref} setShowQueryBar={setShowQueryBar} />}
     </>
   );
 }

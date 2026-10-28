@@ -1,0 +1,7 @@
+.div {
+    inset: 0;
+    background-color: var(--bg-transparent);
+    position: fixed;
+    opacity: 0.4;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import icon from "@/assets/hazard.png";
 import gif from "@/assets/spinner.gif";
 
-function Dropdown({ query, ref }) {
+function Dropdown({ query, ref, setShowDropdown }) {
   const { data, isLoading, isError } = useGetMoviesViaSearchQuery({ str: query });
 
   if (isLoading) {
@@ -19,17 +19,20 @@ function Dropdown({ query, ref }) {
   if (isError) {
     return (
       <p className={styles.p}>
-        <img src={icon} alt="errorIcon" ref={ref} /> Some has error occured!
+        <img src={icon} alt="errorIcon" ref={ref} /> 
+        Some has error occured!
       </p>
     );
   }
 
   return (
     <Link to={`/search?query=${query}`}>
-      <ul className={styles.ul} ref={ref}>
-        {data.results?.map((movie) => (
+      <ul className={styles.ul} ref={ref} onClick={() => setShowDropdown(false)}>
+        {data.results.length !== 0 ? data.results?.map((movie) => (
           <li key={movie.id}>{movie.title}</li>
-        ))}
+        )) : <p className={styles.noResults}>
+          No results found.
+        </p>}
       </ul>
     </Link>
   );

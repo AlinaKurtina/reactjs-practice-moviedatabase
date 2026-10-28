@@ -45,3 +45,7 @@
 .ul li:hover {
   background-color: var(--bg-transparent);
 }
+
+.noResults {
+  padding: 5px;
+}
