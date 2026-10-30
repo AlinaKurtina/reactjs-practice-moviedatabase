@@ -1,6 +1,6 @@
 import Search from "@/components/common/Search/Search.jsx";
 import Logo from "@/components/common/Logo/Logo.jsx";
-import styles from "./Navigation.module.css";
+import styles from "./Header.module.css";
 import { Link } from "react-router";
 import NavLinks from "./NavLinks/NavLinks";
 import BurgerNavLinks from "./BurgerNavLinks/BurgerNavLinks";

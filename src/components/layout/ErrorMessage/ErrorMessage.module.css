@@ -1,9 +1,8 @@
 .div {
-  width: fit-content;
-  height: fit-content;
+  width: 70vw;
+  height: 70vh;
   padding: 50px;
   color: var(--font-color-dark);
-  background-color: var(--card-bg);
   border-radius: 15px;
 }
 

@@ -20,5 +20,10 @@
   "keywords": "Keywords",
   "overview": "Overview",
   "phone": "Phone",
-  "mail": "Mail"
+  "mail": "Mail",
+    "error_mgs": {
+    "went_wrong": "Something went wrong.",
+    "sorry": "We are really sorry.",
+    "to_main": "Return to the main page."
+  }
 }
