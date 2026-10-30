@@ -9,7 +9,7 @@ import { useState } from "react";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import LanguageChoice from "@/components/common/LanguageChoice/LanguageChoice";
 
-function Navigation() {
+function Header() {
   const [showQueryBar, setShowQueryBar] = useState(false);
   const ref = useOutsideClick(() => setShowQueryBar(false));
 
@@ -18,17 +18,17 @@ function Navigation() {
       <nav className={styles.nav}>
         <div className="container">
           <div className={styles.div}>
-          <Link to={"/"}>
-            <Logo />
-          </Link>
-          <NavLinks />
-          <div className={styles.mobile}>
-            <BurgerNavLinks />
-          </div>
-          <div className={styles.flexDiv}>
-            <Search setShowQueryBar={setShowQueryBar} showQueryBar={showQueryBar} />
-            <LanguageChoice />
-          </div>
+            <Link to={"/"}>
+              <Logo />
+            </Link>
+            <NavLinks />
+            <div className={styles.mobile}>
+              <BurgerNavLinks />
+            </div>
+            <div className={styles.flexDiv}>
+              <Search setShowQueryBar={setShowQueryBar} showQueryBar={showQueryBar} />
+              <LanguageChoice />
+            </div>
           </div>
         </div>
       </nav>
@@ -37,4 +37,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default Header;

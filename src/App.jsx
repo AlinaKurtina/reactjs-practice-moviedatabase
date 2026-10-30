@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router";
 
 import ErrorMessage from "./components/layout/ErrorMessage/ErrorMessage.jsx";
 import React from "react";
-import Navigation from "./components/layout/Navigation/Navigation.jsx";
+import Header from "./components/layout/Header/Header.jsx";
 import Footer from "./components/layout/Footer/Footer.jsx";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
@@ -17,7 +17,7 @@ import i18n from "./i18next.js";
 const Layout = () => {
   return (
     <React.Fragment>
-      <Navigation />
+      <Header />
       <Outlet />
       <Footer />
     </React.Fragment>
