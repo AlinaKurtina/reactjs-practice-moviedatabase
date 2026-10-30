@@ -19,9 +19,10 @@
   max-width: 700px;
   min-height: inherit;
   padding: 15px;
+  box-shadow: inset 0px -60px 20px -20px var(--bg-transparent);
 
   overflow-x: auto;
-  scrollbar-width: thin;
+  /* scrollbar-width: thin; */
   scrollbar-color: var(--bg-dark) var(--bg-transparent);
   mask-image: linear-gradient(to right, black calc(100% - 10px), transparent 100%);
 }
@@ -38,5 +39,9 @@
     scrollbar-width: none;
     mask-image: linear-gradient(to right, black calc(100% - 10px), transparent 100%);
     -webkit-mask-image: linear-gradient(to right, black calc(100% - 10px), transparent 100%);
+  }
+
+  .heading {
+    font-size: medium;
   }
 }

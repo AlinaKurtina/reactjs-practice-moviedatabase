@@ -6,7 +6,8 @@
   align-items: center;
   gap: 10px;
   color: var(--font-color-light);
-  box-shadow: 0px 0px 100px 150px var(--bg-dark) inset;
+  position: relative;
+  box-shadow: 5px 5px 100px 50px var(--bg-dark) inset;
 }
 
 .placeholderPoster {
@@ -34,6 +35,11 @@
   gap: 20px;
   justify-content: center;
   margin-left: 10%;
+  filter: 
+    drop-shadow(0 2px 4px rgba(10, 17, 40, 0.8))
+    drop-shadow(0 8px 16px rgba(3, 64, 120, 0.45))
+    drop-shadow(0 20px 40px rgba(3, 64, 120, 0.35))
+    drop-shadow(0 35px 70px rgba(219, 238, 255, 0.12));
 }
 
 .overview {
@@ -59,14 +65,16 @@
   }
 
   .poster {
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 250px;
   }
 
   .metadata {
-    font-size: smaller;
+    font-size: x-small;
     gap: 10px;
     margin: 5%;
     margin-top: 0px;
+    max-width: 250px;
   }
+
 }

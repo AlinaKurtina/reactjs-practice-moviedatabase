@@ -6,7 +6,6 @@
   padding: 20px;
   padding-left: 0px;
   padding-right: 0px;
-  margin-top: 10px;
   gap: 10px;
   flex-direction: column;
 }
@@ -27,6 +26,7 @@
   max-height: 350px;
   padding-top: 20px;
   padding-bottom: 5px;
+  box-shadow: inset 0px -60px 20px -20px var(--bg-transparent);
 
   scrollbar-width: thin;
   scrollbar-color: var(--bg-dark) var(--bg-transparent);

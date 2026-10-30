@@ -7,6 +7,9 @@
   cursor: pointer;
   position: relative;
   color: var(--font-color-light);
+
+  transition: transform 0.35s ease;
+  will-change: transform;
 }
 
 .heroBannerImgs {
@@ -23,6 +26,14 @@
   height: 100%;
   mix-blend-mode: overlay;
   object-fit: cover;
+}
+
+.heroBanner:hover {
+  transform: scale(1.02, 1.02);
+}
+
+.heroBanner:hover .p {
+  text-decoration: underline;
 }
 
 .imgBackground {
@@ -42,6 +53,17 @@
   text-shadow: 10px 10px 3px var(--bg-dark);
   width: fit-content;
 }
+
+.heroBannerImgHovered {
+  flex: 0 0 100%;
+  max-width: 1200px;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 100px 50px var(--bg-dark) inset;
+}
+
 
 @media screen and (max-width: 676px) {
   .heroBanner {

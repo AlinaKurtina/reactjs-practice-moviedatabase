@@ -32,3 +32,20 @@
 .actorCard:hover {
   transform: translateY(-10px);
 }
+
+@media screen and (max-width: 676px) {
+  .actorCard {
+    width: 120px;
+    height: 200px;
+    font-size: small;
+  }
+
+  .actorPicture {
+    height: 160px;
+  }
+
+  .actorPicturePlaceholder {
+    width: inherit;
+    height: 160px;
+  }
+}
