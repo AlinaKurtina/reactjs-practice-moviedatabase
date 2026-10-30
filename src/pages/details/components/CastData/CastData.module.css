@@ -21,13 +21,9 @@
   padding: 15px;
 
   overflow-x: auto;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-dark) var(--bg-transparent);
   mask-image: linear-gradient(to right, black calc(100% - 10px), transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, black calc(100% - 10px), transparent 100%);
-}
-
-.list::-webkit-scrollbar {
-  display: none;
 }
 
 @media screen and (max-width: 676px) {

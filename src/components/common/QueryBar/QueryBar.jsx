@@ -5,12 +5,14 @@ import { useNavigate } from "react-router";
 import Dropdown from "../Dropdown/Dropdown";
 import { debounce } from "@/utils/debounce";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
+import { useTranslation } from "react-i18next";
 
 function QueryBar({ ref, setShowQueryBar }) {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
   const refDropdown = useOutsideClick(() => setShowDropdown(false));
+  const { t } = useTranslation();
 
   function handleSearch(e) {
     e.preventDefault();
@@ -35,7 +37,7 @@ function QueryBar({ ref, setShowQueryBar }) {
           <input
             name="query"
             type="text"
-            placeholder="Start searching..."
+            placeholder={t("search")}
             className={styles.input}
             value={inputValue}
             onChange={(e) => {

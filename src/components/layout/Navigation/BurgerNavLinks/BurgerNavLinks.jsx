@@ -3,10 +3,12 @@ import hambg from "@/assets/hamburger.png";
 import styles from "./BurgerNavLinks.module.css";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import Backdrop from "@/components/common/Backdrop/Backdrop";
+import { useTranslation } from "react-i18next";
 
 function BurgerNavLinks() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const menuRef = useOutsideClick(() => setMenuOpen(false));
+  const { t } = useTranslation();
 
   return (
     <>
@@ -22,13 +24,13 @@ function BurgerNavLinks() {
       {isMenuOpen ? (
         <ul className={styles.linksHamburger}>
           <li>
-            <a>Movies</a>
+            <a>{t('nav_links.movies')}</a>
           </li>
           <li>
-            <a>TV Shows</a>
+            <a>{t('nav_links.tv_series')}</a>
           </li>
           <li>
-            <a>People</a>
+            <a>{t('nav_links.people')}</a>
           </li>
         </ul>
       ) : null}

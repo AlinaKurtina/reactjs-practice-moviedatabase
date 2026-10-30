@@ -6,8 +6,11 @@ import ErrorMessage from "@/components/layout/ErrorMessage/ErrorMessage.jsx";
 import { Link } from "react-router";
 import HomePageSkeleton from "../HomePageSkeleton/HomePageSkeleton.jsx";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 function MovieSection({ category }) {
+  const { t } = useTranslation();
+  const currentCategory = t(`categories.${category}`);
   const currentLang = useSelector((state) => state.lang.value);
   const { data, isLoading, isError } = useGetMovieListQuery({ category, lang: currentLang });
 
@@ -22,7 +25,7 @@ function MovieSection({ category }) {
   return (
     <div className="container">
       <div className={styles.container}>
-        <h3 className={styles.heading}>{category === "top_rated" ? "Top Rated" : category}</h3>
+        <h3 className={styles.heading}>{currentCategory}</h3>
         <ul className={styles.list}>
           {data?.results?.map((movie) => (
             <li key={movie.id}>

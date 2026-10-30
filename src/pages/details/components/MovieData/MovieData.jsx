@@ -3,8 +3,13 @@ import "@/styles/global.css";
 import { urls } from "@/services/urls";
 import { dateFormatter } from "@/utils/dateFormatter";
 import { timeFormatter } from "@/utils/timeFormatter";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 function MovieData({ title, date, genres, duration, overview, imgUrl, backdropUrl }) {
+  const { t } = useTranslation();
+  const currentLang = useSelector((state) => state.lang.value);
+
   return (
     <main
       className={styles.container}
@@ -26,7 +31,7 @@ function MovieData({ title, date, genres, duration, overview, imgUrl, backdropUr
             <h2 className={styles.title}>{title}</h2>
             <ul className={styles.metadataList}>
               <li>
-                <span>{dateFormatter(date)}</span>
+                <span>{dateFormatter(date, currentLang)}</span>
               </li>
               •
               <li>
@@ -34,12 +39,12 @@ function MovieData({ title, date, genres, duration, overview, imgUrl, backdropUr
               </li>
               •
               <li>
-                <span>{timeFormatter(duration)}</span>
+                <span>{timeFormatter(duration, currentLang)}</span>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className={styles.overviewHeading}>Overview</h3>
+            <h3 className={styles.overviewHeading}>{t("overview")}</h3>
             <p className={styles.overview}>{overview}</p>
           </div>
         </div>

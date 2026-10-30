@@ -7,8 +7,10 @@ import { useNavigate } from "react-router";
 import Dropdown from "../Dropdown/Dropdown";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import Backdrop from "../Backdrop/Backdrop";
+import { Trans, useTranslation } from "react-i18next";
 
 function Search({ showQueryBar, setShowQueryBar }) {
+  const {t} = useTranslation();
   const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
@@ -31,7 +33,7 @@ function Search({ showQueryBar, setShowQueryBar }) {
         <input
           className={styles.input}
           type="text"
-          placeholder="Start looking for movies..."
+          placeholder={`${t('search')}`}
           value={inputValue}
           onChange={(e) => {
             debounce(setInputValue(e.currentTarget.value), 300);
@@ -39,7 +41,9 @@ function Search({ showQueryBar, setShowQueryBar }) {
           }}
         />
         <button className={styles.button} type="submit">
-          Search
+         <Trans i18nKey='search_button'>
+          {t('search_button')}
+         </Trans>
         </button>
         {showDropdown && inputValue !== "" && <Dropdown query={inputValue} ref={ref} />}
       </form>

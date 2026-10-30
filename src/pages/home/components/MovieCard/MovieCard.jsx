@@ -1,8 +1,12 @@
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import styles from "./MovieCard.module.css";
 import { urls } from "@/services/urls";
 import { dateFormatter } from "@/utils/dateFormatter";
 
 function MovieCard({ title, date, imgUrl, handleClick }) {
+  const { getNewItem } = useLocalStorage();
+  const currentLang = getNewItem("lang");
+
   return (
     <div className={styles.card} onClick={handleClick}>
       {imgUrl ? (
@@ -12,7 +16,7 @@ function MovieCard({ title, date, imgUrl, handleClick }) {
       )}
       <div className={styles.data}>
         <span className={styles.title}>{title}</span>
-        <span className={styles.date}>{dateFormatter(date)}</span>
+        <span className={styles.date}>{dateFormatter(date, currentLang)}</span>
       </div>
     </div>
   );

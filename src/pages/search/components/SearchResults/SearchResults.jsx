@@ -2,8 +2,11 @@ import { Link } from "react-router";
 import ResultCard from "../ResultCard/ResultCard.jsx";
 import styles from "./SearchResults.module.css";
 import { dateFormatter } from "@/utils/dateFormatter.js";
+import { useSelector } from "react-redux";
 
 function SearchResults({ searchData }) {
+  const currentLang = useSelector((state) => state.lang.value);
+  
   return (
     <div className="container">
       <ul className={styles.searchResults}>
@@ -13,7 +16,7 @@ function SearchResults({ searchData }) {
               <Link to={`/movie/${entry.id}`}>
                 <ResultCard
                   title={entry.title}
-                  date={dateFormatter(entry.release_date)}
+                  date={dateFormatter(entry.release_date, currentLang)}
                   overview={entry.overview}
                   imgUrl={entry.poster_path}
                 />

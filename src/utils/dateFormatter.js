@@ -13,12 +13,29 @@ const months = {
   12: "December",
 };
 
-export function dateFormatter(date) {
+const monthsRU = {
+  "01": "января",
+  "02": "февраля",
+  "03": "марта",
+  "04": "апреля",
+  "05": "мая",
+  "06": "июня",
+  "07": "июля",
+  "08": "августа",
+  "09": "сентября",
+  10: "октября",
+  11: "ноября",
+  12: "декабря",
+};
+
+export function dateFormatter(date, lang) {
   if (!date) return "No information";
+
   const dateArr = date.split("-");
   const day = dateArr[2][0].includes("0") ? dateArr[2][1] : dateArr[2];
-  const monthKey = Object.keys(months).find((month) => month === dateArr[1]);
+  const dict = lang === "en-US" ? months : monthsRU;
+  const month = dict[dateArr[1]];
   const year = dateArr[0];
 
-  return `${months[monthKey]} ${day}, ${year}`;
+  return lang === "en-US" ? `${month} ${day}, ${year}` : `${day} ${month}, ${year}`;
 }

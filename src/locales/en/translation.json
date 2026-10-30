@@ -1,0 +1,24 @@
+{
+  "nav_links": {
+    "movies": "Movies", 
+    "tv_series": "TV  Series", 
+    "people": "People" 
+  },
+  "hero_banner": "See what's now playing",
+  "search": "Start looking for movies...",
+  "search_button": "Search",
+  "categories": {
+    "popular": "Popular",
+    "top_rated": "Top Rated",
+    "upcoming": "Upcoming"
+  },
+  "contacts": "Contacts",
+  "cast": "Cast",
+  "status": "Status",
+  "original_language": "Original Language",
+  "budget": "Budget",
+  "keywords": "Keywords",
+  "overview": "Overview",
+  "phone": "Phone",
+  "mail": "Mail"
+}

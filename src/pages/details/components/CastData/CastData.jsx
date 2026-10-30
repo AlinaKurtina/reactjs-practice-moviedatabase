@@ -1,10 +1,12 @@
+import { useTranslation } from "react-i18next";
 import ActorCard from "../ActorCard/ActorCard";
 import styles from "./CastData.module.css";
 
 function CastData({ cast }) {
+  const { t } = useTranslation();
   return (
     <section className={styles.container}>
-      <h2 className={styles.heading}>Cast</h2>
+      <h2 className={styles.heading}>{t('cast')}</h2>
       <ul className={styles.list}>
         {cast.map((cm) => (
           <li key={cm.id}>

@@ -4,14 +4,15 @@ import SearchPage from "./pages/search/SearchPage.jsx";
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router";
 
-import { ApiProvider } from "@reduxjs/toolkit/query/react";
-import { api } from "./services/api.js";
 import ErrorMessage from "./components/layout/ErrorMessage/ErrorMessage.jsx";
 import React from "react";
 import Navigation from "./components/layout/Navigation/Navigation.jsx";
 import Footer from "./components/layout/Footer/Footer.jsx";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
+
+// oxlint-disable-next-line no-unused-vars
+import i18n from "./i18next.js";
 
 const Layout = () => {
   return (

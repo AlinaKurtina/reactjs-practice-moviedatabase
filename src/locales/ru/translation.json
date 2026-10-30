@@ -1,0 +1,24 @@
+{
+  "nav_links": {
+    "movies": "Фильмы", 
+    "tv_series": "Сериалы", 
+    "people": "Люди" 
+  },
+  "hero_banner": "Что смотрят сейчас",
+  "search": "Найти фильм...",
+  "search_button": "Поиск",
+    "categories": {
+    "popular": "Популярное",
+    "top_rated": "Высоко оценили",
+    "upcoming": "Скоро выйдут"
+  },
+  "contacts": "Контакты",
+  "cast": "Актерский состав",
+  "status": "Состояние",
+  "original_language": "Язык оригинала",
+  "budget": "Бюджет",
+  "keywords": "Ключевые слова",
+  "overview": "Обзор",
+  "phone": "Телефон",
+  "mail": "Почта"
+}

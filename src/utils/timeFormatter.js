@@ -1,7 +1,7 @@
-export function timeFormatter(time) {
+export function timeFormatter(time, lang) {
   const convertedTime = Number(time);
   const hours = Math.floor(convertedTime / 60);
   const minutes = convertedTime % 60;
 
-  return `${hours} h ${minutes} mins`;
+  return `${hours} ${lang === 'en-US' ? 'h' : 'ч.'} ${minutes} ${lang === 'en-US' ? 'mins' : 'мин.'}`;
 }
