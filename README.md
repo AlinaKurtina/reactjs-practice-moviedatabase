@@ -35,5 +35,18 @@
 
 # How to run
 
-*use this link
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Using link
+https://reactjs-practice-moviedatabase.vercel.app/
+
+### Using interpret (with Node.js)
+
+1. Install Dependencies
+```bash
+npm install
+```
+2. Start Development Server
+```bash
+npm run dev
+```
+3. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
