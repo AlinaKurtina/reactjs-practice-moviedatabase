@@ -8,7 +8,7 @@
   position: relative;
   color: var(--font-color-light);
 
-  transition: transform 0.35s ease;
+  transition: transform 1.5s ease;
   will-change: transform;
 }
 

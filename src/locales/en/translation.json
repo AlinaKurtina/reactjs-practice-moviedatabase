@@ -21,9 +21,10 @@
   "overview": "Overview",
   "phone": "Phone",
   "mail": "Mail",
-    "error_mgs": {
+  "error_mgs": {
     "went_wrong": "Something went wrong.",
     "sorry": "We are really sorry.",
     "to_main": "Return to the main page."
-  }
+  },
+  "loading": "Loading..."
 }

@@ -4,9 +4,11 @@ import { Link } from "react-router";
 import icon from "@/assets/hazard.png";
 import gif from "@/assets/spinner.gif";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 function Dropdown({ query, ref, setShowDropdown }) {
   const currentLang = useSelector((state) => state.lang.value);
+  const { t } = useTranslation();
   const { data, isLoading, isError } = useGetMoviesViaSearchQuery({
     str: query,
     lang: currentLang,
@@ -16,7 +18,7 @@ function Dropdown({ query, ref, setShowDropdown }) {
     return (
       <p className={styles.p}>
         <img src={gif} alt="loadingSpinner" ref={ref} width={22} height={22} />
-        Loading...
+        {t('loading')}
       </p>
     );
   }
@@ -25,7 +27,7 @@ function Dropdown({ query, ref, setShowDropdown }) {
     return (
       <p className={styles.p}>
         <img src={icon} alt="errorIcon" ref={ref} />
-        Some has error occured!
+       {t('error_mgs.went_wrong')}
       </p>
     );
   }
