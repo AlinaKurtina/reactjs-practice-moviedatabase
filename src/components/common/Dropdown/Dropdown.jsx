@@ -33,15 +33,13 @@ function Dropdown({ query, ref, setShowDropdown }) {
   }
 
   return (
-    <Link to={`/search?query=${query}`}>
       <ul className={styles.ul} ref={ref} onClick={() => setShowDropdown(false)}>
         {data.results.length !== 0 ? (
-          data.results?.map((movie) => <li key={movie.id}>{movie.title}</li>)
+          data.results?.map((movie) => <Link to={`/movie/${movie.id}`}><li key={movie.id}>{movie.title}</li></Link>)
         ) : (
           <p className={styles.noResults}>No results found.</p>
         )}
       </ul>
-    </Link>
   );
 }
 

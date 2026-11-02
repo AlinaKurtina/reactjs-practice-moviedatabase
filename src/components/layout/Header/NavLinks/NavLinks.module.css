@@ -8,6 +8,10 @@
   cursor: pointer;
 }
 
+.links li a {
+    color: var(--font-color-light);
+}
+
 .links li:hover {
   text-decoration: underline;
 }

@@ -4,6 +4,7 @@ import styles from "./BurgerNavLinks.module.css";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import Backdrop from "@/components/common/Backdrop/Backdrop";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 function BurgerNavLinks() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -24,13 +25,13 @@ function BurgerNavLinks() {
       {isMenuOpen ? (
         <ul className={styles.linksHamburger}>
           <li>
-            <a>{t('nav_links.movies')}</a>
+            <Link to="/no-page-yet">{t("nav_links.movies")}</Link>
           </li>
           <li>
-            <a>{t('nav_links.tv_series')}</a>
+            <Link to="/no-page-yet">{t("nav_links.tv_series")}</Link>
           </li>
           <li>
-            <a>{t('nav_links.people')}</a>
+            <Link to="/no-page-yet">{t("nav_links.people")}</Link>
           </li>
         </ul>
       ) : null}

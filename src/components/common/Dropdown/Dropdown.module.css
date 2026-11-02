@@ -17,7 +17,6 @@
 
 .ul {
   background-color: white;
-  color: var(--button-hovered);
   max-width: inherit;
   height: fit-content;
   position: absolute;
@@ -38,6 +37,7 @@
 }
 
 .ul li {
+  color: var(--button-hovered);
   padding: 5px;
   border-bottom: 1px solid var(--separator);
 }

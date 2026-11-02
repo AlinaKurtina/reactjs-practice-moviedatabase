@@ -33,7 +33,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/movie/:id" element={<MovieDetailsPage />} />
             <Route path="/search/" element={<SearchPage />} />
-            <Route path="*" element={<ErrorMessage />} />
+            <Route path="*" element={<ErrorMessage reason="no-page" />} />
           </Route>
         </Routes>
       </BrowserRouter>

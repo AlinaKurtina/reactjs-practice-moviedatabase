@@ -26,5 +26,6 @@
     "sorry": "We are really sorry.",
     "to_main": "Return to the main page."
   },
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "no_page": "The page is currently in work"
 }

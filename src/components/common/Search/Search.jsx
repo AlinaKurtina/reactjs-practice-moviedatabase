@@ -2,7 +2,7 @@ import styles from "./Search.module.css";
 import search_icon from "@/assets/search.png";
 import { debounce } from "@/utils/debounce";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Dropdown from "../Dropdown/Dropdown";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
@@ -10,11 +10,12 @@ import Backdrop from "../Backdrop/Backdrop";
 import { Trans, useTranslation } from "react-i18next";
 
 function Search({ showQueryBar, setShowQueryBar }) {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
   const ref = useOutsideClick(() => setShowDropdown(false));
+  const delayedSearch = useMemo(() => debounce((value) => setInputValue(value), 300), []);
 
   function handleSearch(e) {
     e.preventDefault();
@@ -22,6 +23,10 @@ function Search({ showQueryBar, setShowQueryBar }) {
       navigate(`/search?query=${encodeURIComponent(inputValue)}`);
     }
   }
+
+  useEffect(() => {
+    return () => delayedSearch.cancel();
+  }, [delayedSearch]);
 
   return (
     <>
@@ -33,17 +38,14 @@ function Search({ showQueryBar, setShowQueryBar }) {
         <input
           className={styles.input}
           type="text"
-          placeholder={`${t('search')}`}
-          value={inputValue}
+          placeholder={`${t("search")}`}
           onChange={(e) => {
-            debounce(setInputValue(e.currentTarget.value), 300);
+            delayedSearch(e.currentTarget.value);
             setShowDropdown(true);
           }}
         />
         <button className={styles.button} type="submit">
-         <Trans i18nKey='search_button'>
-          {t('search_button')}
-         </Trans>
+          <Trans i18nKey="search_button">{t("search_button")}</Trans>
         </button>
         {showDropdown && inputValue !== "" && <Dropdown query={inputValue} ref={ref} />}
       </form>

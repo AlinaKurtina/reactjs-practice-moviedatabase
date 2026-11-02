@@ -18,7 +18,7 @@ function AsideData({ status, language, budget, keywords }) {
       </div>
       <div className={styles.item}>
         <span className={styles.heading}>{t('budget')}</span>
-        <span>{budget}$</span>
+        <span>{budget.toLocaleString('en-US')}$</span>
       </div>
       <div className={styles.item}>
         <span className={styles.heading}>{t('keywords')}</span>

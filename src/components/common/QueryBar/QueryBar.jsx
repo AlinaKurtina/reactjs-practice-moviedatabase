@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./QueryBar.module.css";
 import search_icon from "@/assets/search.png";
 import { useNavigate } from "react-router";
@@ -13,6 +13,7 @@ function QueryBar({ ref, setShowQueryBar }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const refDropdown = useOutsideClick(() => setShowDropdown(false));
   const { t } = useTranslation();
+  const delayedSearch = useMemo(() => debounce((value) => setInputValue(value), 300), []);
 
   function handleSearch(e) {
     e.preventDefault();
@@ -22,6 +23,10 @@ function QueryBar({ ref, setShowQueryBar }) {
       setShowQueryBar(false);
     }
   }
+
+  useEffect(() => {
+    return () => delayedSearch.cancel();
+  }, [delayedSearch])
 
   return (
     <>
@@ -39,9 +44,8 @@ function QueryBar({ ref, setShowQueryBar }) {
             type="text"
             placeholder={t("search")}
             className={styles.input}
-            value={inputValue}
             onChange={(e) => {
-              debounce(setInputValue(e.currentTarget.value), 300);
+              delayedSearch(e.currentTarget.value);
               setShowDropdown(true);
             }}
           />

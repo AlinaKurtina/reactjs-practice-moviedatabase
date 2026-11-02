@@ -19,7 +19,7 @@ function MovieSection({ category }) {
   }
 
   if (isError) {
-    <ErrorMessage />;
+    return <ErrorMessage />;
   }
 
   return (

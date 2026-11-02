@@ -1,7 +1,11 @@
-export const debounce = (func, delay) => {
+export function debounce(func, delay) {
   let timeoutId;
-  return (...args) => {
+  const fn = (...args) => {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => func(...args), delay);
   };
-};
+
+  fn.cancel = () => clearTimeout(timeoutId);
+
+  return fn;
+}

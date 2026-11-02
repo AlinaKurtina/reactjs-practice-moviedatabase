@@ -1,5 +1,6 @@
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import styles from "./NavLinks.module.css";
+import { Link } from "react-router";
 
 function NavLinks() {
   const { t } = useTranslation();
@@ -8,19 +9,13 @@ function NavLinks() {
     <>
       <ul className={styles.links}>
         <li>
-          <Trans i18nKey="nav_links.movies">
-            <a>{t('nav_links.movies')}</a>
-          </Trans>
+          <Link to="/no-page-yet">{t("nav_links.movies")}</Link>
         </li>
         <li>
-          <Trans i18nKey="nav_links.tv_series">
-            <a>{t('nav_links.tv_series')}</a>
-          </Trans>
+          <Link to="/no-page-yet">{t("nav_links.tv_series")}</Link>
         </li>
         <li>
-          <Trans i18nKey="nav_links.people">
-            <a>{t('nav_links.people')}</a>
-          </Trans>
+          <Link to="/no-page-yet">{t("nav_links.people")}</Link>
         </li>
       </ul>
     </>

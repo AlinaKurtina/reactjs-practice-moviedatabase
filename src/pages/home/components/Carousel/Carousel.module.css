@@ -4,7 +4,6 @@
   min-height: 300px;
   margin-top: 20px;
   margin-left: auto;
-  cursor: pointer;
   position: relative;
   color: var(--font-color-light);
 
@@ -29,11 +28,7 @@
 }
 
 .heroBanner:hover {
-  transform: scale(1.02, 1.02);
-}
-
-.heroBanner:hover .p {
-  text-decoration: underline;
+  transform: scale(1.01, 1.01);
 }
 
 .imgBackground {
@@ -52,8 +47,6 @@
   font-weight: 500;
   text-shadow: 10px 10px 3px var(--bg-dark);
   width: fit-content;
-  pointer-events: none;
-  transition: text-decoration 0.5s ease-in;
 }
 
 .heroBannerImgHovered {
